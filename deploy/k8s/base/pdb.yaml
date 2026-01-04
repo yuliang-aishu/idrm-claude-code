@@ -1,0 +1,10 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: spec-cc-0104-api-pdb
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: spec-cc-0104
+      component: api

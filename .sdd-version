@@ -1,0 +1,12 @@
+{
+  "version": "0.6.0",
+  "installed_at": "2026-01-04T08:00:25Z",
+  "services": ["api","rpc","job","consumer"],
+  "project_name": "spec-cc-0104",
+  "go_module": "github.com/yuliang-aishu/idrm-claude-code/spec-cc-0104",
+  "db_config": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "idrm"
+  }
+}

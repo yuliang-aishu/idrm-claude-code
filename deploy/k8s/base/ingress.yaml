@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: spec-cc-0104-ingress
+  annotations:
+    # generic ingress annotation, can be overridden in overlays
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: api.spec-cc-0104.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: spec-cc-0104-api
+                port:
+                  number: 8888

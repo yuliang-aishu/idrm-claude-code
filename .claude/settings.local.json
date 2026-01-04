@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(speckit.specify)",
+      "Skill(speckit.implement)",
+      "Bash(.specify/scripts/powershell/check-prerequisites.ps1:*)",
+      "Bash(go get:*)",
+      "Bash(goctl:*)",
+      "Bash(cat:*)",
+      "Bash(go build:*)",
+      "Bash(go doc:*)",
+      "Bash(go mod tidy)"
+    ]
+  }
+}
