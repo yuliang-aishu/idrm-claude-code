@@ -9,7 +9,28 @@
       "Bash(cat:*)",
       "Bash(go build:*)",
       "Bash(go doc:*)",
-      "Bash(go mod tidy)"
+      "Bash(go mod tidy)",
+      "Bash(tree -L 3 -I 'node_modules|.git')",
+      "Bash(go test:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(mysql:*)",
+      "Bash(docker exec:*)",
+      "Bash(docker logs:*)",
+      "Bash(docker-compose down:*)",
+      "Bash(make:*)",
+      "Bash(export DB_HOST=127.0.0.1)",
+      "Bash(export DB_PORT=3306:*)",
+      "Bash(export DB_NAME=idrm:*)",
+      "Bash(export DB_USER=root:*)",
+      "Bash(export DB_PASSWORD=rootpass123:*)",
+      "Bash(export:*)",
+      "Bash(export LOG_LEVEL=info:*)",
+      "Bash(go run:*)",
+      "Bash(curl:*)",
+      "Bash(python:*)",
+      "Bash(docker run -d --name idrm-mysql-new:*)",
+      "Bash(mysql:8.0 )",
+      "Bash(wmic:*)"
     ]
   }
 }

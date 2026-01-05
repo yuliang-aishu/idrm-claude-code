@@ -2,18 +2,19 @@ package datasource
 
 import (
 	"context"
-	"database/sql"
 	"testing"
+	"time"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
+	"gorm.io/gorm"
 )
 
 // GormDataSourceModelTestSuite GORM 数据源模型测试套件
 type GormDataSourceModelTestSuite struct {
 	suite.Suite
 	model DataSourceModel
-	db    *sql.DB
+	db    *gorm.DB
 	ctx   context.Context
 }
 
@@ -76,6 +77,7 @@ func (suite *GormDataSourceModelTestSuite) TestBuildQuery() {
 // TestToResp 测试响应转换
 func (suite *GormDataSourceModelTestSuite) TestToResp() {
 	// 创建测试数据
+	testTime := time.Now()
 	data := &DataSource{
 		Id:          "test-id",
 		Name:        "test-name",

@@ -3,8 +3,32 @@
 
 package config
 
-import "github.com/zeromicro/go-zero/rest"
-
 type Config struct {
-	rest.RestConf
+	Name   string
+	Host   string
+	Port   int
+	DB     DBConfig
+}
+
+type DBConfig struct {
+	Default DefaultDB
+}
+
+type DefaultDB struct {
+	Host            string
+	Port            int
+	Database        string
+	Username        string
+	Password        string
+	Charset         string
+	MaxIdleConns    int
+	MaxOpenConns    int
+	ConnMaxLifetime int
+	ConnMaxIdleTime int
+	LogLevel        string
+	SlowThreshold   int
+	SkipDefaultTxn  bool
+	PrepareStmt     bool
+	SingularTable   bool
+	DisableForeignKey bool
 }

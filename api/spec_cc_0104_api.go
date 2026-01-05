@@ -23,7 +23,10 @@ func main() {
 	var c config.Config
 	conf.MustLoad(*configFile, &c)
 
-	server := rest.MustNewServer(c.RestConf)
+	server := rest.MustNewServer(rest.RestConf{
+		Host: c.Host,
+		Port: c.Port,
+	})
 	defer server.Stop()
 
 	ctx := svc.NewServiceContext(c)

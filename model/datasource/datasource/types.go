@@ -24,6 +24,11 @@ type DataSource struct {
 	DeletedAt   gorm.DeletedAt `gorm:"index"`
 }
 
+// TableName 自定义表名
+func (DataSource) TableName() string {
+	return "datasource"
+}
+
 // DataSourceResp 响应结构（隐藏敏感信息）
 type DataSourceResp struct {
 	Id          string `json:"id"`
